@@ -1,0 +1,107 @@
+;チュートリアル用スクリプトファイル
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+
+
+;背景の新規定義
+[bg_new storage="room"]
+
+;背景の表示
+[bg_show ]
+
+;キャラクターの宣言 
+[chara_new name=yuko storage=chara scale="2" y=-1 jname=ゆうこ jcolor="#249390"]
+[chara_face name=yuko face="nico" storage="chara_w" ]
+
+
+[jump target="debug"]
+
+;キャラクターを表示
+[show name=yuko]
+#俺
+ゆうこさんおはよう。[p]
+
+[chara_mod name="yuko" face="nico" time=0.5]
+#yuko
+あら、はやいのね？。おはよう。[p]
+
+#俺
+今日はいい天気だね。[p]
+
+[chara_mod name="yuko" face="default" time=0.1]
+#yuko
+そうね。でも天気予報では昼から雨らしいわよ[p]
+
+
+とある学校の教室[p]
+
+おはようございまーす。[p]
+まだ誰もいない。[l]一番乗りだな。[p]
+なんだか落ち着かないけど[r]
+おとなしく座って待ってよう。[p]
+・・・[l][r]
+・・・・・・[r][l]
+・・・・・・・・・[p]
+なんだよ、誰も来ないじゃねーか。[p]
+
+
+
+;背景移動のスクリプト
+ガタガタ[p]
+廊下で物音がする。[p]
+誰か来たのかな？[p]
+
+[bg_mod storage="rouka" time=0.5]
+
+誰もいない。。。[p]
+気のせいだったか[p]
+教室にもどろう[p]
+
+[bg_mod storage="room" time=2]
+
+
+*debug
+ジャンプ先[p]
+seすんぞ、おらあ[p]
+[playse storage=click]
+どうじゃ[p]
+[scene file="Main" ]
+
+;フェードイン再生開始　3秒かけて徐々に再生されます[p]
+[playbgm time="3" storage=music]
+
+音楽をフェードアウト停止させます[p]
+[stopbgm time=5]
+
+[select_new text="選択肢１" target=*select_a1 ]
+[select_new text="選択肢２" target=*select_a2 ]
+[select_new text="選択肢３" target=*select_a3 ]
+
+[select_show sound=click ]
+
+[s]
+*select_a1
+選択肢１が押されました[p]
+@jump file="wide/scene2" target=*select_a1
+
+*select_a2
+選択肢２が押されました[p]
+@jump file="wide/scene3" target=*select_a2
+
+*select_a3
+選択肢３が押されました[p]
+@jump target=*a_common
+
+*a_common 
+共通ルートです[p]

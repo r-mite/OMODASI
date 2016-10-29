@@ -1,0 +1,22 @@
+;新エンジン開発シナリオ　
+
+;背景の定義
+
+;ライブラリ呼び出し
+;[call file=system target="*system_setting_buttons"]
+;@call file=libs/utils
+
+
+
+;横バージョン読み込み
+;@jump file=wide/title
+@jump file=wide/scene00
+
+;縦バージョン読み込み
+;@jump file=tall/title
+
+[s]
+
+;-------------------------
+
+

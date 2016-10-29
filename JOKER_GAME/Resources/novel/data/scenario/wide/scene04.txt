@@ -1,0 +1,189 @@
+;scene04
+;魔王戦
+;|
+;エンディング
+
+[flag exp="f.bg=bg6"]
+[call file="wide/setting"]
+
+[show name=yuni x=3 wait=false]
+[chara_mod name=yuni face=angry wait=false]
+[show name=kage x=-3]
+
+*true1
+
+[playbgm storage="ev3" time=2 wait=false vol={f.bgm_vol}]
+
+#
+魔王はドスッと音を立てて膝をつく。[p]
+
+#魔王
+「完敗だ。」[p]
+
+#わたし
+「さあ、じっちゃの屋台で働いてもらおうか。」[p]
+
+#魔王
+「どうゆうことだ。[r]
+お金を要求するんじゃないのか？」[p]
+
+#
+困惑を隠せない魔王。[p]
+
+[chara_mod name=yuni face=lol wait=false]
+
+#わたし
+「ばっかお前、そんなことで一々こっちに来たりしねーよ。[r]
+こっちは今、後継ぎがいなくて困ってるんだ。」[p]
+
+「とても自分一人ではできるものではないし、[r]
+何より、幼いころからうちの焼きそばを食べてた君に頼みたいんだ。」[p]
+
+#
+突如明かされる真実。[r]
+蘇る若かりし日の記憶。[p]
+
+#魔王
+「そこまで言われちゃ、断れないな。[r]
+魔王業も飽きてきたとこだったし、ちょうどいいや。」[p]
+
+「これからよろしくな。」[p]
+
+[chara_mod name=yuni face=default wait=false]
+
+#わたし
+「ああ、こちらこそ。」[p]
+
+#
+どちらからともなく二人は手をつなぐ。[p]
+
+言葉数こそ少なかったが、雰囲気は温かい。[p]
+
+夕日に照らされながら、村へ帰っていくのだった。[p]
+
+おしまい[p]
+
+[s]
+
+
+
+*lose01
+[calc exp="f.bt=1"]
+[jump target=start]
+
+*lose02
+[calc exp="f.bt=2"]
+[jump target=start]
+
+*lose03
+[calc exp="f.bt=3"]
+[jump target=start]
+
+*lose04
+[calc exp="f.bt=4"]
+[jump target=start]
+
+*start
+
+[flag exp="f.bg=bg6"]
+[call file="wide/setting"]
+
+[show name=yuni x=3 wait=false]
+[chara_mod name=yuni face=pain wait=false]
+[if exp="f.bt=4"]
+[show name=teki x=-3]
+[endif]
+
+*bad
+
+[playbgm storage="ev4" time=2 wait=false vol={f.bgm_vol}]
+
+#
+腹部を抑えた手のひらは真っ赤に染まっていた。[p]
+
+#わたし
+「なんだよ、これ。[r]
+うわああああ！？」[p]
+
+#魔王
+「あ、それケチャップなんでだいじょぶっすよ。」[p]
+
+[chara_mod name=yuni face=happen wait=false]
+
+#わたし
+「・・・[lr]
+そりゃねーぜ。」[p]
+
+;#
+;バトルナンバー:{f.bt}[p]
+
+*select
+[select_new text="もう一度挑戦する" target=*select_a1 ]
+[select_new text="勝ったことにする" target=*select_a2 ]
+[select_new text="ヒントを見る" target=*select_a3 ]
+[select_new text="こんなゲームやめてやる！" target=*select_a4 ]
+[select_show sound=click ]
+[s]
+
+*select_a1
+[if exp="{f.bt}==1"]
+@scene file="Main1"
+[elsif exp="{f.bt}==2"]
+@scene file="Main2"
+[elsif exp="{f.bt}==3"]
+@scene file="Main3"
+[else]
+@scene file="Main4"
+[endif]
+
+*select_a2
+[if exp="{f.bt}==1"]
+@jump file="wide/scene01" scene="new"
+[elsif exp="{f.bt}==2"]
+@jump file="wide/scene02" scene="new"
+[elsif exp="{f.bt}==3"]
+@jump file="wide/scene03" scene="new"
+[else]
+@jump file="wide/scene04" scene="new"
+[endif]
+
+*select_a3
+[if exp="{f.bt}==1"]
+#
+ステージ1は歩いて叩くだけのとてもシンプルなバトルだ。[p]
+失敗してしまったのは、手札が悪かっただけかもしれない。[r]
+距離をとり、ターンを稼ぐと確実だ。[p]
+[jump target=select]
+
+[elsif exp="{f.bt}==2"]
+#
+ステージ2はバフデバフを盛って敵を圧倒するバトルだ。[p]
+相手の体力が1000もあるので、[r]
+通常状態での攻撃の無駄撃ちは厳禁だ。[p]
+近くの林を利用して、相手との間合いをとるといいぞ。[p]
+[jump target=select]
+
+[elsif exp="{f.bt}==3"]
+#
+ステージ3は複数の敵とのバトルだ。[p]
+敵によってパラメータに違いがあるので、[r]
+弱い敵から確実に仕留めていこう。[p]
+防御バフも使えるので、[r]
+囲まれたときにも慌てず対処しよう。[p]
+[jump target=select]
+
+[else]
+#
+ステージ4はこれまでを総合したバトルだ。[p]
+フィールドにはギミックがあり、[r]
+ある範囲を超えると魔王が動き出すようになっている。[p]
+また魔王は通常の敵と違い、2回行動や貫通攻撃を繰り出すぞ。[p]
+高威力な攻撃やターンバフはここぞというときまで温存しておこう。[p]
+[jump target=select]
+
+[endif]
+
+*select_a4
+#
+プレイしていただき、ありがとうございました！[p]
+[s]

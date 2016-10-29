@@ -1,0 +1,27 @@
+;共通設定集
+
+[call file=wide/libs/utils]
+[call file=wide/macros]
+
+;数値関連
+[calc exp="f.bgm_vol=0.1"]
+
+;背景
+[bg_new storage={f.bg}]
+[bg_show]
+
+;キャラクター 
+[chara_new name=yuni storage="yuni_nor" scale=0.4 y=-1 jname=ゆにてぃ jcolor="#249390"]
+[chara_face name=yuni face="close" storage="yuni_eye"]
+[chara_face name=yuni face="angry" storage="yuni_ang"]
+[chara_face name=yuni face="happen" storage="yuni_hap"]
+[chara_face name=yuni face="lol" storage="yuni_lol"]
+[chara_face name=yuni face="pain" storage="yuni_pai"]
+[chara_new name=kage storage="kage" scale=0.4 y=-1 jname=ゆに jcolor="#249390"]
+[chara_new name=teki storage="teki_nor" scale=0.4 y=-1 jname=ゆに jcolor="#249390"]
+
+;メッセージ
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name=_sp_chara_name]

@@ -1,0 +1,94 @@
+;scene01
+;第一回戦
+;|
+;第二回戦
+
+[flag exp="f.bg=bg2"]
+[call file="wide/setting"]
+
+[show name=yuni wait=false x=3]
+[chara_mod name=yuni face=lol wait=false]
+[show name=kage x=-3]
+
+[playbgm storage="ev2" time=2 wait=false vol={f.bgm_vol}]
+
+#わたし
+そうだ。こんな感じでやれば・・・！！[p]
+
+#
+過去の記憶を取り戻し、反撃を開始する。[p]
+
+感覚を研ぎ澄ますと、[r]
+次第に相手の行動パターンがわかってくる。[p]
+
+[chara_mod name=yuni face=default wait=false]
+
+#わたし
+見える・・・。見えるぞ！[r]
+なんだ簡単なことじゃないか。[p]
+
+1、2、[l]・・・ここだ！[p]
+
+#
+バシュ！[r]
+”かげ”にこちらの攻撃がクリーンヒットする。[p]
+
+ふらついた隙を見逃さず、続けてお見舞いする。[r]
+会心の一撃だ。[p]
+
+[chara_hide name=kage wait=false]
+[chara_mod name=yuni face=happen]
+
+”かげ”はダメージに耐え切れなかったのか、[r]
+その場で霧散する。[p]
+
+勝負あったようだ。[p]
+
+[chara_mod name=yuni face=default]
+
+#わたし
+よしこれならいける。[r]
+魔王のもとに急ごう。[p]
+
+#
+・・・[lr]
+・・・・・・[lr]
+・・・・・・・・・[p]
+
+[bg_mod storage="bg3"]
+
+[chara_hide name=yuni time=0.5]
+[show name=yuni x=3 wait=false]
+[chara_mod name=yuni face=pain wait=false]
+[show name=kage x=-3]
+
+#わたし
+まじ・・・かよ・・・[p]
+
+#
+攻撃を当てているという手ごたえはあるのだが、[r]
+”かげ”はびくともしない。[p]
+
+まるでダメージが通らないようだ。[p]
+
+[chara_mod name=yuni face=angry wait=false]
+
+#わたし
+正面がだめならサイドからなら、どうだ！[p]
+
+#
+だがその甲斐なく、微動だにせず受け止められてしまう。[r]
+当然傷一つついた様子もない。[p]
+
+[chara_mod name=yuni face=close wait=false]
+
+#わたし
+もっと力があれば・・・[p]
+
+#
+蘇る過去の記憶。[r]
+その力はすでに得ていたのだ。[p]
+
+いや、こんなことが前にも・・・[p]
+
+[scene file="Main2"]

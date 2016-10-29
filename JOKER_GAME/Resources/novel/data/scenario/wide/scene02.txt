@@ -1,0 +1,82 @@
+;scene02
+;第二回戦
+;|
+;第三回戦
+
+[flag exp="f.bg=bg3"]
+[call file="wide/setting"]
+
+[show name=yuni wait=false]
+[chara_mod name=yuni face=pain]
+
+[playbgm storage="ev2" time=2 wait=false vol={f.bgm_vol}]
+
+#わたし
+なんとか勝てたようだな。[p]
+
+敵が強くなってきているが、自分も負けていない。[p]
+
+[chara_mod name=yuni face=angry wait=false]
+
+このまま突っ切る！[p]
+
+[bg_mod storage="bg4"]
+
+[chara_hide name=yuni time=0.5]
+[show name=yuni x=3 wait=false]
+[show name=kage x=-3]
+
+#
+少しずつ技を取り戻し、さらに磨いていく。[r]
+しかし、行く手を阻むのはまたしても”かげ”。[p]
+
+#わたし
+さあ次はどんな相手だ・・・？[p]
+
+#
+先制して技を打つ。[r]
+見事に命中。[p]
+
+さらにもう一撃。[p]
+
+[chara_mod name=yuni face=happen wait=false]
+[chara_hide name=kage]
+
+敵はうずくまるとそのまま霧散した。[p]
+
+[chara_mod name=yuni face=lol wait=false]
+
+#わたし
+確実にレベルアップできてるな。[r]
+これなら魔王とも対等かそれ以上に渡り合えるだろう。[p]
+
+魔王、待ってろよ。すぐに迎えにいく。[p]
+
+#
+・・・[lr]
+しかし、そう簡単にはいかせてくれないようだ。[p]
+
+[chara_hide name=yuni time=0.5]
+[show name=yuni x=3 wait=false]
+[chara_mod name=yuni face=angry wait=false]
+[show name=kage x=-3]
+
+前方に見えるのは先ほどと同じ”かげ”。[r]
+さらに後方にも気配を感じる。[p]
+
+#わたし
+力がだめなら、数で勝負ってわけか。[p]
+
+いいだろう。その勝負受けてやる。[p]
+
+[chara_mod name=yuni face=close wait=false]
+
+#
+一度状況を確認し、深呼吸する。[p]
+
+[chara_mod name=yuni face=angry wait=false]
+
+#わたし
+過去をも凌駕する力を手に入れて見せる！！[p]
+
+[scene file="Main3"]

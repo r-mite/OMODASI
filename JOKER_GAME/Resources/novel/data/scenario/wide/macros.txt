@@ -1,0 +1,6 @@
+;macro集
+;便利に使おう
+
+[macro name=lr]
+[l][r]
+[endmacro]

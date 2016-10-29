@@ -1,0 +1,123 @@
+;scene00
+;オープニング
+;|
+;第一回戦
+
+[flag exp="f.bg=bg1"]
+[call file="wide/setting"]
+
+[show name=yuni]
+
+[playbgm storage="ev1" time=2 wait=false vol={f.bgm_vol}]
+
+;@jump file="wide/scene04" target=lose02
+
+#わたし
+ついにここまで来たのか・・・[r]
+思えば、長かった戦いもこれで最後になるな。[p]
+
+[chara_mod name=yuni face=close time=0.5 wait=false]
+
+村のじっちゃやばっちゃは元気にしているだろうか。[r]
+久しく連絡を取っていなかったからな。[p]
+
+まあおとたんがうまくやってるに違いない、うん。[p]
+
+[chara_mod name=yuni face=default time=0.5 wait=false]
+
+そんなことより今は集中だ。[p]
+
+#
+目の前にそびえるのは魔王のお城。[p]
+
+村から遠く離れた山岳地帯にあり、[r]
+反り立つ崖に重々しく佇んでいた。[p]
+
+周りは蔦に覆われ、いかにも魔王らしい悪趣味だ。[p]
+
+これから待ち受ける困難を思うと足がすくむが、[r]
+同時にこれまでの修行の成果を試せるのだと武者震いもする。[p]
+
+#わたし
+覚悟しろよ。[r]
+自慢の技でコテンパンにしてやるぜ！[p]
+
+[stopbgm time=2 wait=false]
+[bg_hide]
+
+#
+・・・[lr]
+・・・・・・[lr]
+・・・・・・・・・[p]
+
+[stopbgm wait=false]
+[playbgm storage="ev2" time=2 wait=false vol={f.bgm_vol}]
+[bg_mod storage="bg2"]
+
+[chara_hide name=yuni time=0.5]
+[show name=yuni x=3 wait=false]
+[chara_mod name=yuni face=pain wait=false]
+[show name=kage x=-3]
+
+#わたし
+うそ・・・だろ・・・。[p]
+
+#
+たまらず床に手をついた。[p]
+
+”かげ”から繰り出される攻撃は、突然に視覚の外から現れる。[p]
+
+縦横無尽に翔るその姿はとても早く、[r]
+風そのものが技の威力になっているかのようだった。[p]
+
+狙いを定め、攻撃を試みるも、全く手ごたえがない。[p]
+
+こちらが攻めの姿勢に移ると、[r]
+どうやら回避に専念するらしい。[p]
+
+しかし、それは守りに入っているわけではなく、[r]
+集中力を欠くことができないプレッシャーを与えていた。[p]
+
+#わたし
+このままでは、体力を消耗するばかりだ。[r]
+何か手を打たなければ・・・・・・[p]
+
+でも、できることは全て試した。[r]
+もう後がない。[p]
+
+くそぅ。くそぅ。[r]
+ここまでだっていうのか。[p]
+
+魔王を前にしてこんなところで・・・・・・[p]
+
+[stopbgm time=3 wait=false]
+
+・・・[lr]
+
+[playbgm storage="bt1" time=3 wait=false vol={f.bgm_vol}]
+
+・・・・・・[p]
+
+[chara_mod name=yuni face=angry time=0.5 wait=false]
+
+引き下がれない！[lr]
+引き下がりたくない！[p]
+
+思い出すんだ。[p]
+
+これまで一体何を学んできた。[p]
+
+そして自分は何をしたいんだ。[p]
+
+[chara_mod name=yuni face=close time=0.5 wait=false]
+
+#
+深く息を吐き、[r]
+すっと目をとじる。[p]
+
+脳裏に描かれるのは過去の記憶。[p]
+
+#わたし
+そうだ、あのとき・・・[p]
+
+[scene file="Main1"]
